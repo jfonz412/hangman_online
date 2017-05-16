@@ -6,34 +6,25 @@ class Player
   end
 
   public
-  def pick_a_letter
-  	puts "Guess a letter"
-    puts "(Enter \"save\" to save and quit)"
-  	loop do
-      @chosen_letter = gets.chomp.downcase
-      break if validate(@chosen_letter) == true
-    end
+  def pick_a_letter(letter)
+    return false if validate(letter) == false
+    @chosen_letter = letter
     @already_picked_letters << @chosen_letter
   end
 
   private
-  def validate(chosen_letter)
-
-  	chosen_letter.scan(/\d/) do 
-  	  puts "No numbers please" 
+  def validate(letter)
+  	letter.scan(/\d/) do 
   	  return false
   	end
-    if chosen_letter == "save" #returns true so that this can be passed to game_saver
+    if letter == "save" #returns true so that this can be passed to game_saver
       true
-    elsif chosen_letter.length != 1
-      puts "Please choose a SINGLE letter"
+    elsif letter.length != 1
       false
-    elsif @already_picked_letters.include? chosen_letter
-      puts "You already played that letter"
+    elsif @already_picked_letters.include? letter
       false
     else
       true
     end
-
   end
 end

@@ -15,7 +15,7 @@ class WordPicker
   end
 
   def load_dictionary
-  	File.read('./dictionary.txt').split
+  	File.read('./lib/dictionary.txt').split
   end
 
   def filter_dictionary(full_dictionary)

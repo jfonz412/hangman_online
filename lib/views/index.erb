@@ -1,10 +1,11 @@
 <html>
   <head></head>
   <body>
-  	<form>
-  		<input type="text" name="name">
-  		<input type="submit" value="Submit name">
+    <p><%= s_w %></p>
+  	<form method="POST" action="/">
+  		<input type="text" name="letter">
+  		<input type="submit" value="Enter letter">
   	</form>
-  	<p>Hello <%= name %></p>
+    <p><%= wrong_letters %></p>
   </body>
 </html>

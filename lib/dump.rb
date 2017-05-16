@@ -9,6 +9,5 @@ class Dump
   	if results[:is_correct] == false && results[:letter] != nil
       @wrong_letters << results[:letter]
     end 
-  	puts "Wrong letters: #{@wrong_letters.join(", ")}"
   end
 end
