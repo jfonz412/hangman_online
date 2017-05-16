@@ -2,10 +2,12 @@
   <head></head>
   <body>
     <p><%= s_w %></p>
+    <img src=<%= image %> alt = "hangman">
+    <p><%= hidden_word %></p>
+    <p><%= wrong_letters %></p>
   	<form method="POST" action="/">
   		<input type="text" name="letter">
   		<input type="submit" value="Enter letter">
   	</form>
-    <p><%= wrong_letters %></p>
   </body>
 </html>

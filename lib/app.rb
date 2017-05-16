@@ -33,7 +33,13 @@ game_saver = GameSaver.new(game_objects)
 
 
 get '/' do
-	erb :index, :locals => {:s_w => the_secret_word, :wrong_letters => game_objects[:letter_dump].wrong_letters }
+	erb :index, 
+	:locals => {
+		          :s_w => the_secret_word,  
+              :image => game_objects[:hanging_man].image,     
+		          :wrong_letters => game_objects[:letter_dump].wrong_letters.join(','),
+		          :hidden_word => game_objects[:secret_word_space].hidden_word.join(' ') 
+		          }
 end
 
 post '/' do
@@ -43,6 +49,21 @@ post '/' do
 	  game_objects[:game_master].check_player_letter(game_objects[:player].chosen_letter)
     game_board.draw_board_objects(game_objects[:game_master].results)
   end
+  
+  # Check game for win/loss
+  if game_objects[:secret_word_space].check_for_win == true
+	  redirect to '/win'
+	elsif game_objects[:hanging_man].turns == 6
+		redirect to '/lose'
+	else
+		redirect to '/'
+	end
+end
 
-	redirect to '/'
+get '/lose' do
+	erb :lose
+end
+
+get '/win' do
+	erb :win
 end
