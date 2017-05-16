@@ -1,4 +1,12 @@
+require 'sinatra'
+require 'sinatra/reloader'
+
+# enable session features
 configure do
-	enable :sessions
-	set :session_secret, "secret"
+	enable :sessions 
+end
+
+get '/' do
+	name = params['name']
+	erb :index, :locals => {:name => name}
 end
