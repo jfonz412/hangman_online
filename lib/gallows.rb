@@ -4,7 +4,7 @@ class Gallows
   def initialize
   	@turns = 0
     @man =  [ 
-    	      "/images/hangman.jpg",
+    	      "public/images/hangman.jpg",
     	      "/images/hangman_1.jpg",
     	      "/images/hangman_2.jpg",
     	      "images/hangman_3.jpg",
