@@ -67,3 +67,8 @@ end
 get '/win' do
 	erb :win
 end
+
+get '/newgame' do
+  newgame
+  redirect to '/'
+end
