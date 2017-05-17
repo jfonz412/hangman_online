@@ -1,0 +1,25 @@
+<html>
+<div id='wrapper'>
+  <head>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+      <img id='gallows' src=<%= image %> alt="hangman" height="50%">
+    <div id='word'>
+      <p><%= hidden_word %></p>
+    </div>
+    <div id='wrongletters'>
+      <p><%= wrong_letters %></p>
+    </div>
+    <div id='letterbox'>
+  	  <form method="POST" action="/">
+  		  <input type="text" name="letter" id="letter_area" autofocus="autofocus">
+  		  <input type="submit" value="Enter letter">
+  	  </form>
+    </div>
+    <div id='newgame'>
+      <a href='/newgame'>New Game</a>
+    </div>
+  </body>
+</div>
+</html>
