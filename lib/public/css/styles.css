@@ -1,0 +1,33 @@
+img {
+	margin-left: 5%
+}
+#gallows {
+	margin: auto;
+	width: 50%;
+	clip: rect(20px,20px,20px,20px);
+}
+
+#word {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	font-size:30px;
+}
+
+#wrongletters {
+	margin: auto;
+	width: 50%;
+    text-align: center
+}
+
+#letterbox {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
+
+#newgame {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}

@@ -1,13 +1,25 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="/css/styles.css"
+  </head>
   <body>
-    <p><%= s_w %></p>
-    <img src=<%= image %> alt="hangman" height="50%">
-    <p><%= hidden_word %></p>
-    <p><%= wrong_letters %></p>
-  	<form method="POST" action="/">
-  		<input type="text" name="letter">
-  		<input type="submit" value="Enter letter">
-  	</form>
+    <div id='gallows'>
+      <img src=<%= image %> alt="hangman" height="50%">
+    </div>
+    <div id='word'>
+      <p><%= hidden_word %></p>
+    </div>
+    <div id='wrongletters'>
+      <p><%= wrong_letters %></p>
+    </div>
+    <div id='letterbox'>
+  	  <form method="POST" action="/">
+  		  <input type="text" name="letter">
+  		  <input type="submit" value="Enter letter">
+  	  </form>
+    </div>
+    <div id='newgame'>
+      <a href='/newgame'>New Game</a>
+    </div>
   </body>
 </html>
