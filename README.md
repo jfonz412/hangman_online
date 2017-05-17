@@ -1,0 +1,1 @@
+Have no idea how to upload to heroku w/ sinatra without errors, I've tried everything and I'm moving on.
