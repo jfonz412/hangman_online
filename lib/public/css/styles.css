@@ -1,10 +1,15 @@
-img {
-	margin-left: 5%
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
 }
+
 #gallows {
-	margin: auto;
-	width: 50%;
-	clip: rect(20px,20px,20px,20px);
+	width: 100%;
+}
+
+#letter_area {
+  width: 10%;
 }
 
 #word {
@@ -28,6 +33,26 @@ img {
 
 #newgame {
   margin: auto;
+  padding: 10px;
   width: 50%;
   text-align: center;
+  background-color: #799ab7;
+  width: 10%;
+  border-radius: 10px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+    font-family: Helvetica;
+}
+
+p {
+	text-align: center;
+	font-family: Helvetica;
+}
+
+h1 {
+  text-align: center;
+  font-family: Helvetica;
 }

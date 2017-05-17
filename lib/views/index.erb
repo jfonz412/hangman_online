@@ -1,11 +1,10 @@
 <html>
+<div id='wrapper'>
   <head>
-    <link rel="stylesheet" href="/css/styles.css"
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
-    <div id='gallows'>
-      <img src=<%= image %> alt="hangman" height="50%">
-    </div>
+      <img id='gallows' src=<%= image %> alt="hangman" height="50%">
     <div id='word'>
       <p><%= hidden_word %></p>
     </div>
@@ -14,7 +13,7 @@
     </div>
     <div id='letterbox'>
   	  <form method="POST" action="/">
-  		  <input type="text" name="letter">
+  		  <input type="text" name="letter" id="letter_area" autofocus="autofocus">
   		  <input type="submit" value="Enter letter">
   	  </form>
     </div>
@@ -22,4 +21,5 @@
       <a href='/newgame'>New Game</a>
     </div>
   </body>
+</div>
 </html>

@@ -41,9 +41,8 @@ game_board = Board.new(game_objects)
 
 get '/' do
 	erb :index, 
-	:locals => {
-		          :s_w => secret_word,  
-                  :image => game_objects[:hanging_man].image,     
+	:locals => { 
+              :image => game_objects[:hanging_man].image,     
 		          :wrong_letters => game_objects[:letter_dump].wrong_letters.join(','),
 		          :hidden_word => game_objects[:secret_word_space].hidden_word.join(' ') 
 		          }
@@ -68,11 +67,11 @@ post '/' do
 end
 
 get '/lose' do
-	erb :lose
+	erb :lose, :locals => { :secret_word => secret_word }
 end
 
 get '/win' do
-	erb :win
+	erb :win, :locals => { :secret_word => secret_word }
 end
 
 get '/newgame' do
